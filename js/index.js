@@ -47,10 +47,11 @@ $('.sub-tit').on('click',function(){
 // notice modal
 let conTits = $('.notice-txt li:nth-child(2) a');
 conTits.on({
-    'click':function(){
+    'click':function(event){
         let noTit = $(this).text();
         $('.modal-notice-tit').text(noTit);
         $('.modal-notice').show(0);
+        event.preventDefault();
     }
 });
 // gallery modal
@@ -63,6 +64,11 @@ $('.gallery-i-box img').on({
         $('.modal-gallery-tit').text(gImgTit);
         $('.modal-gallery .modal-t-box').text(gImgCon);
         $('.modal-gallery').show(0);
+    }
+});
+$('.gallery-list a').on({
+    'click':function(event){
+        event.preventDefault();
     }
 });
 // modal close
