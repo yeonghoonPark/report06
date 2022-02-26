@@ -44,10 +44,6 @@ $('.sub-tit').on('click',function(){
     $(this).parent('.art').addClass('on');
 });
 
-// notice tit
-let noCoTit = $('.notice-txt a');
-noCoTit.eq(0).load('notice.txt #title01');
-
 // notice modal
 let conTits = $('.notice-txt li:nth-child(2) a');
 conTits.on({
